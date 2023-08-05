@@ -3,6 +3,10 @@ This module for python3 create socket-like object for communicate with child pro
 
 Module use named pipes to read child stdout, because anonymous pipes not have async API.
 
+## Installation
+
+Copy dll from release to working dir, or to libs dir (`<python.exe dir>/Lib`)
+
 ## Peculiarity:
 - Timeout used only for reading, writting always sync.
 
@@ -64,3 +68,12 @@ PopenSocket(pathToExecutable, args)
 `socket.timeout` - timeout
 
 `ConnectionAbortedError` - child close stdout or child done
+
+## Build
+
+For build required VS Studio c++ compiler
+```
+python.exe .\setup.py build
+```
+
+Result will be in `build\libs`
