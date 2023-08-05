@@ -12,7 +12,9 @@ Copy dll from release to working dir, or to libs dir (`<python.exe dir>/Lib`)
 
 - Maybe this object can be used in `select()`
 
-- Recieve only from `stdout`, `stderr` redirected to `stderr` parent process
+- Recieve only from `stdout`
+
+  `stderr` redirected to `stderr` parent process
 
 Example of use:
 ```python
