@@ -77,3 +77,11 @@ python.exe .\setup.py build
 ```
 
 Result will be in `build\libs`
+
+## Conclusion
+<details>
+  <summary>My personal advice</summary>
+  While i research this topic, i'm found a post on forum from 2005 year. In that post senior C developer describe a problem of absence Async API for anonymous pipe in windows api. This problem has not been solved at now.
+  
+  My advice: Use Linux instead of Windows. In Linux this functionallity was supported "from box"
+</details>
