@@ -1,7 +1,7 @@
 # PopenSocket
 This module for python3 creates socket-like object for communication with child process on Windows using WinAPI.
 
-Anonymous pipes don't have async API, so module uses named pipes to read child stdout.
+Anonymous pipes don't have async API, so module uses named pipes to read child's stdout.
 
 ## Installation
 
