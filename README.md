@@ -1,22 +1,22 @@
 # PopenSocket
-This module for python3 create socket-like object for communicate with child process on Windows using WinAPI.
+This module for python3 creates socket-like object for communication with child process on Windows using WinAPI.
 
-Module use named pipes to read child stdout, because anonymous pipes not have async API.
+Anonymous pipes don't have async API, so module uses named pipes to read child's stdout.
 
 ## Installation
 
-Copy dll from release to working dir, or to libs dir (`<python.exe dir>/Lib`)
+Copy dll from release dir to working dir, or to libs dir (`<python.exe dir>/Lib`)
 
 ## Peculiarity:
-- Timeout used only for reading, writting always sync.
+- Timeout is used only for reading, writting is always synchronous.
 
-- Maybe this object can be used in `select()`
+- This object should be able to be used in `select()`
 
 - Recieve only from `stdout`
 
   `stderr` redirected to `stderr` parent process
 
-Example of use:
+Example of useage:
 ```python
 from PopenSocket import PopenSocket
 from socket import timeout # import from socket exception (used for compability)
@@ -73,17 +73,17 @@ PopenSocket(pathToExecutable, args)
 
 ## Build
 
-For build required VS Studio c++ compiler
+VS Studio compiler is required for build
 ```
 python.exe .\setup.py build
 ```
 
-Result will be in `build\libs`
+Result will be available in `build\libs`
 
 ## Conclusion
 <details>
   <summary>My personal advice</summary>
-  While i research this topic, i'm found a post on forum from 2005 year. In that post senior C developer describe a problem of absence Async API for anonymous pipe in windows api. This problem has not been solved at now.
+  While I was researching this topic I found a forum post from 2005. In that post senior C developer described a problem of absence Async API for anonymous pipe in windows api. This problem has not been solved until now.
   
-  My advice: Use Linux instead of Windows. In Linux this functionallity was supported "from box"
+  My advice: Use Linux instead of Windows. In Linux this functionallity was supported "from the box"
 </details>
